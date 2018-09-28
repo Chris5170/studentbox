@@ -1,0 +1,219 @@
+:root{
+	--main-bg-color: #fff;
+	--alt-bg-color: #f2f2f2;
+	--main-text-color: #000;
+	--main-highlight-color: #922c48;
+	--font-size: 1.1em;
+	--main-transition: .3s ease;
+	--header-font: 'Comfortaa', cursive;
+	--content-font: 'Roboto', sans-serif;
+}
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--header-font);
+}
+a, p, input, div {
+	font-family: var(--content-font);
+}
+a {
+	text-decoration: none;
+	color: var(--main-highlight-color);
+}
+body {
+	background: var(--alt-bg-color);
+}
+section  {
+	min-height: calc(100vh - 95px);
+	width: 100vw;
+}
+.center{
+	width: 1080px;
+	margin: 0 auto;
+}
+header{
+	background: var(--main-highlight-color);
+	box-shadow: 0 0 50px rgba(0,0,0,0.3);
+	width: 100vw;
+}
+#header {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	/*align-items: flex-end;*/
+	align-items: center;
+}
+#header div {
+	flex-grow: 1;
+}
+#main_nav ul {
+	justify-content: flex-start;
+}
+#cta_container ul {
+	justify-content: flex-end;
+}
+#main_nav ul, #cta_container ul{
+	list-style-type: none;
+	display: flex;
+}
+#main_nav ul li {
+
+}
+#main_nav ul li a {
+	padding: .5em 1em;
+	display: block;
+	/*border-bottom: 3px solid transparent;*/
+	color: var(--alt-bg-color);
+	font-weight: 400;
+	transition: var(--main-transition);
+}
+#main_nav ul li a:hover {
+	/*border-bottom: 3px solid var(--main-bg-color);*/
+	font-weight: 700;
+	transition: var(--main-transition);
+}
+#main_nav ul li:not(:last-child), #cta_container ul li:not(:last-child){
+	margin-right: 1em;
+}
+
+#logo_container img {
+	height: 75px;
+	display: block;
+	margin: 10px;
+}
+
+#cta_container {
+	align-self: center;
+}
+#cta_container ul li a {
+	background: var(--alt-bg-color);
+	border-radius: 10px;
+	padding: 1em 2em;
+	display: block;
+	transition: var(--main-transition);
+	color: var(--main-highlight-color);
+}
+#cta_container ul li a:hover{
+	background: var(--main-bg-color);
+	transition: var(--main-transition);
+	color: var(--main-highlight-color);
+}
+
+.flex {
+	display: flex;
+}
+.col {
+	flex-direction: column;
+}
+#products {
+	align-items: center;
+}
+article.product_item {
+	flex-grow: 1;
+	flex-basis: 0;
+	max-width: 33%;
+	/*overflow: hidden;*/
+
+}
+article.product_item:not(:last-child){
+	margin-right: 4em;
+}
+article.product_item img {
+	height: 200px;
+	width: 100%;
+	box-shadow: 5px 5px 10px rgba(0,0,0,.4);
+	object-fit: cover;
+}
+article.product_item a {
+	display: block;
+	width: 80%;
+	margin: 1em auto;
+	padding: .5em 1em;
+	border: 1px solid var(--main-highlight-color);
+	border-radius: 50px;
+	text-align: center;
+	background: #fff;
+}
+
+/*#product .product_background {
+	height: 300px;
+	width: 100%;
+	background: url(https://placekitten.com/1080/300);
+}*/
+#product .product_desc {
+	padding: 1em;
+}
+
+#order #type .radio, #order #servings .radio{
+	width: 50%;
+	padding: 1em;
+	background: white;
+	text-align: center;
+	font-size: 1.5em;
+	color: var(--main-highlight-color);
+	cursor: pointer;
+}
+#order #type .radio:first-child {
+	border-radius: 25px 0 0 25px;
+}
+#order #type .radio:last-child {
+	border-radius: 0 25px 25px 0;
+}
+#order #servings .radio{
+	font-size: 1em;
+	border-radius: 50px;
+}
+#order #servings .radio:not(:first-child){
+	margin-left: 1em;
+}
+
+#order #type .selected, #order #servings .selected {
+	background: var(--main-highlight-color);
+	color: var(--alt-bg-color);
+}
+#order #tilvalg .checkbox {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1em;
+	cursor: pointer;
+}
+#order #tilvalg .checkbox div {
+	display: inline-block;
+	text-align: center;
+	padding-top: .3em;
+	width: 2em;
+	height: 2em;
+	border-radius: 1em;
+	background: #fff;
+	color: var(--main-highlight-color);
+	margin-right: 1em;
+	color: var(--alt-bg-color);
+}
+#order #tilvalg .checkbox.checked div {
+	background: var(--main-highlight-color);
+}
+#order input[type="submit"]{
+	display: block;
+	float: right;
+	padding: 1em 2em;
+	background: #fff;
+	border: 1px solid var(--main-highlight-color);
+	border-radius: 50px;
+	color: var(--main-highlight-color);
+	cursor: pointer;
+}
+
+#type, #servings {
+	margin-bottom: 2em;
+}
+.my_slides{
+	width: 100%;
+	height: 600px;
+	object-fit: cover;
+}
+.radio{
+	display: none;
+}
